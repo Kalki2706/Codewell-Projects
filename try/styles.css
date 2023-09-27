@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(Background.png);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+  background: #fff;
+  width: 400px;
+  border-radius: 0.5rem;
+}
+
+.card header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(226, 89%, 54%, 0.9);
+  padding: 3.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  background-image: url(Pattern.png);
+  width: 100%;
+  height: 100%;
+}
+
+header > p {
+  font-size: 1.5rem;
+  max-width: 90%;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.card .card-content {
+  padding: 1.5rem;
+}
+
+.card-content > p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #3f3f3f;
+  font-weight: 500;
+}
+
+.subscribe {
+  margin: 7% 0;
+}
+
+.subscribe .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3%;
+}
+
+.form > input {
+  padding: 0.7rem;
+  width: 100%;
+  border: 1px solid #cfcfcf57;
+  background-color: #cfcfcf3d;
+  border-radius: 0.3rem;
+}
+
+.form > label {
+  background-color: #2355f2;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.subscribe small {
+  color: #a8a8a8;
+}
+
+.user .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 4%;
+}
+
+.name {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.role {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #616161;
+}
+
+.user-review {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #616161;
+}
