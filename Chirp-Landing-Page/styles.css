@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --light-gray: #fbf8f3;
+  --light-blue: #3180f5;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #737373;
+  --sky-blue: #1da1f2;
+  --dark-sky-blue: #1f7898;
+  --dim-blue: #d7f5f5;
+  --orange: #ffad23;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  width: 100%;
+  max-width: 100px;
+}
