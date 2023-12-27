@@ -2,11 +2,15 @@
   /* Primary colors */
   --black: #000;
   --white: #fff;
-  --light-black: #101011;
+  --light-black: #151516;
 
   /* Fonts */
   --qs: 'Quicksand', 'Lato', sans-serif;
   --lato: 'Lato', 'Quicksand', sans-serif;
+
+  /* Height */
+  --header-height: 12dvh;
+  --footer-height: 5dvh;
 }
 
 *,
@@ -21,6 +25,10 @@ html {
 
 body {
   font-size: 1.6rem;
+  margin: 0;
+  min-height: 100dvh;
+  color: var(--white);
+  background: var(--black);
 }
 
 img {
@@ -28,10 +36,49 @@ img {
 }
 
 #logo {
-  max-width: 300px;
+  max-width: 150px;
 }
 
 #profile {
   max-width: 50px;
   border-radius: 50%;
+}
+
+.project__img {
+  max-width: 350px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+header {
+  min-height: var(--header-height);
+  border: 2px solid red;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  min-height: (100dvh - (var(--header-height) + var(--footer-height)));
+}
+
+.project {
+  max-width: 350px;
+  padding: 1.5em 1em;
+  text-align: center;
+  background: var(--black);
+  /* color: #000; */
+  /* border: 1px solid rgb(3, 3, 255); */
+  box-shadow: -4px -4px 1px 0 rgb(3, 3, 255), 4px 4px 1px 0 red;
+  border-radius: 4px;
+}
+
+a {
+  display: block;
+  color: var(--white);
 }
