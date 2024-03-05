@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/logo.svg" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="./src/font.css" /> -->
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>IndieBrew Landing Page</title>
+  </head>
+  <body>
+    <header class="sw__background">
+      <div class="header align__center container flex">
+        <a href="#" class="flex align__center logo__link" target="_self"
+          ><img id="logo" src="./assets/logo.svg" alt="Logo"
+        /></a>
+
+        <img
+          class="svg cursor__pointer"
+          src="./assets/hamburger-menu.svg"
+          alt="Menu"
+        />
+
+        <nav class="navbar hide">
+          <ul>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Support</a></li>
+          </ul>
+
+          <button
+            class="cta--btn cursor__pointer"
+            type="button"
+            onclick="signUp()"
+          >
+            <strong>Get Started</strong> &mdash; <span>it's free</span>
+          </button>
+
+          <img
+            class="svg cursor__pointer"
+            src="./assets/close-menu.svg"
+            alt="Close"
+          />
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="sw__background">
+        <div class="container hero__section flex flex__reverse">
+          <div class="hero__text">
+            <h1 class="black__text">Your weekly personal feed digest.</h1>
+            <p>
+              With IndieBrew, get personal feeds from resources all around the
+              web, including Reddit, HackerNews, IndieHackers, and much more.
+            </p>
+            <button
+              class="cta--btn cursor__pointer"
+              type="button"
+              onclick="signUp()"
+            >
+              <strong>Get Started</strong> &mdash; <span>it's free</span>
+            </button>
+
+            <img src="./assets/user-avatars.svg" alt="" />
+            <p>
+              Join <strong>32,642</strong> IndieBrewers in curating their
+              personal digest.
+            </p>
+          </div>
+
+          <img
+            class="hero__img"
+            src="./assets/feed-mockup.png"
+            alt="Feed Mockup"
+          />
+        </div>
+      </section>
+
+      <section class="container resources__section">
+        <section class="social__links flex flex__reverse">
+          <div class="social__links--text">
+            <h2 class="black__text">
+              Curate your feed from dozens of resources.
+            </h2>
+            <p>
+              We cover all major platforms where one could want to curate their
+              feed from. Reddit, ProductHunt, IndieHackers, and so much more.
+            </p>
+            <a href="#" class="clr--purple"
+              >See full list of resources &longrightarrow;</a
+            >
+          </div>
+
+          <img src="./assets/social-media-icons.png" alt="Social Media Icons" />
+        </section>
+
+        <section class="accessibility__section flex">
+          <img src="./assets/phone-mockup.png" alt="Phone Mockup" />
+
+          <div class="accessibility__section--text">
+            <h2 class="black__text">
+              Access your feed from the comfort of your phone.
+            </h2>
+            <p>
+              With native apps for both iOS and Android, accessing your curated
+              content has never been easier.
+            </p>
+            <a href="#" class="clr--purple"
+              >See full list of resources &longrightarrow;</a
+            >
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="sw__background">
+      <div class="footer container">
+        <div class="footer__text">
+          <h3 class="black__text">IndieBrew</h3>
+          <p>
+            With IndieBrew, get personal feeds from resources all around the
+            web, including Reddit, HackerNews, and much more.
+          </p>
+        </div>
+
+        <p>Made with ❤️ in the UK.</p>
+
+        <div class="footer__links">
+          <div class="sitemap__resources">
+            <div class="sitemap">
+              <h3 class="black__text">Sitemap</h3>
+              <ul>
+                <li><a href="#">Homepage</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+            </div>
+
+            <div class="resources">
+              <h3 class="black__text">Resources</h3>
+              <ul>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="company__resources">
+            <div class="company">
+              <h3 class="black__text">Company</h3>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+
+            <div class="resources">
+              <h3 class="black__text">Resources</h3>
+              <ul>
+                <li><a href="#">HackerNews</a></li>
+                <li><a href="#">Reddit</a></li>
+                <li><a href="#">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
