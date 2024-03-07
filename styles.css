@@ -45,6 +45,11 @@ img {
   border-radius: 50%;
 }
 
+.projects__container {
+  display: flex;
+  gap: 5rem;
+}
+
 .project__img {
   max-width: 350px;
 }
