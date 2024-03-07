@@ -1,0 +1,56 @@
+:root {
+  /* Primary Colors */
+  --smoke-white: #fcfcf9;
+  --purple: #694cf6;
+  --gray: #505050;
+
+  /* Neutral Colors */
+  --white: #fff;
+  --black: #000;
+
+  /* Heights */
+  --header-height: 5svh;
+  --footer-height: 10svh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'DM-Sans';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  text-rendering: optimizeSpeed;
+  background: var(--smoke-white);
+  color: var(--gray);
+  padding: 3em 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: 2em;
+}
+
+.flex {
+  display: flex;
+}
+
+.align__center {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
