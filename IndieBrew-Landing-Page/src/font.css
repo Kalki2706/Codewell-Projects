@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'DM-Sans';
+  src: url(../fonts/dm-sans.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/static/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url(../fonts/static/Roboto-Medium.ttf);
+}
