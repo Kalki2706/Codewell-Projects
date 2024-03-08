@@ -1,27 +1,46 @@
+// const nav = document.querySelector('.navbar');
 const menu = document.querySelector('.menu'),
   close = document.querySelector('.close'),
   nav = document.querySelector('.navbar'),
   buttons = document.querySelectorAll('button');
 
-menu.addEventListener('click', () => {
+function addClickEvent(selector, EventCallback) {
+  if (!(EventCallback instanceof Function)) {
+    console.error(
+      `Error: addClickEvent(selector, EventCallback): Second argument require to be a function callback but it is of ${typeof EventCallback} type`
+    );
+  }
+
+  let element = document.querySelectorAll(selector);
+  if (element.length === 1) {
+    console.log(element[0]);
+    element[0].addEventListener('click', EventCallback);
+  }
+
+  element.forEach((allElements) => {
+    allElements.addEventListener('click', EventCallback);
+  });
+}
+
+// menu
+addClickEvent('.menu', () => {
   nav.classList.add('open__nav');
   menu.style.display = 'none';
   close.style.display = 'block';
 });
 
-close.addEventListener('click', () => {
+// close
+addClickEvent('.close', () => {
   nav.classList.remove('open__nav');
   menu.style.display = 'block';
   close.style.display = 'none';
 });
 
-// Sign Up page redirection
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    function redirect() {
-      window.location.href = './Sign-Up-Page/index.html';
-    }
+// buttons
+addClickEvent('button', () => {
+  function redirect() {
+    window.open('./sign-up-page/index.html');
+  }
 
-    redirect();
-  });
+  redirect();
 });
