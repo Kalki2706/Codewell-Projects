@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/font.css" />
+    <link rel="stylesheet" href="../src/general.css" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>Sign Up form</title>
+  </head>
+  <body>
+    <header class="container flex align__center">
+      <a href="#" class="flex align__center logo__link" target="_self"
+        ><img id="logo" src="../assets/logo.svg" alt="Logo"
+      /></a>
+
+      <div class="go__back flex align__center">
+        <button id="go--back" class="flex cursor__pointer">
+          <img src="../assets/black-arrow.svg" alt="" />
+        </button>
+
+        <span>Back to homepage</span>
+      </div>
+    </header>
+
+    <main class="container flex column row align__center">
+      <section>
+        <h1>Create your personalized feed.</h1>
+
+        <div class="features">
+          <p class="emoji balloon">
+            <strong>Over 20 resources.</strong> With resources ranging from
+            Reddit to IndieHackers, we've got all your needs covered.
+          </p>
+
+          <p class="emoji newspaper">
+            <strong>Delivered weekly.</strong> Every week at exactly Tuesday
+            12:00 P.M. EST &mdash; expect a value-packed digest right in your
+            email.
+          </p>
+
+          <p class="emoji bulb">
+            <strong>Unlimited ideas.</strong> With all the ideas you'll be
+            reading about, what's stopping you from creating a sustainable
+            startup?
+          </p>
+        </div>
+      </section>
+
+      <form>
+        <h2>Create your IndieBrew Account</h2>
+
+        <label for="email">Email</label>
+        <input
+          class="cursor__pointer"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john@example.com"
+          required
+        />
+
+        <label for="name">Full Name</label>
+        <input
+          class="cursor__pointer"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="John Doe"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          class="cursor__pointer"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="At least 8 Characters"
+          required
+        />
+
+        <div class="flex terms__conditions">
+          <input
+            class="cursor__pointer"
+            type="checkbox"
+            name="terms"
+            id="terms"
+            required
+          />
+          <p>
+            By creating an account on IndieBrew, you agree to the
+            <strong>
+              <a href="#">Terms & Conditions.</a>
+            </strong>
+          </p>
+        </div>
+
+        <button type="submit" class="cursor__pointer">Create an Account</button>
+      </form>
+    </main>
+
+    <script>
+      const goBackBtn = document.getElementById('go--back');
+
+      // Sign Up page redirection
+      goBackBtn.addEventListener('click', () => {
+        function redirect() {
+          window.location.href = '../index.html';
+        }
+
+        redirect();
+      });
+    </script>
+  </body>
+</html>
