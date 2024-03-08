@@ -1,0 +1,201 @@
+body {
+  color: var(--black);
+  background: rgb(253, 248, 248);
+  background: radial-gradient(
+    circle,
+    rgba(253, 248, 248, 1) 0%,
+    rgba(246, 230, 248, 1) 30%,
+    rgba(246, 230, 248, 1) 70%,
+    rgba(253, 248, 248, 1) 100%
+  );
+  padding: 3em 0;
+}
+
+.container {
+  padding-inline: 1.5em;
+}
+
+/* Combinators */
+.go__back button,
+input {
+  border: 1px solid var(--border-gray);
+}
+
+label,
+#password,
+h1 {
+  margin-bottom: 0.5em;
+}
+
+form,
+input {
+  padding: 1em;
+}
+
+/* <----- Header -----> */
+
+header {
+  justify-content: space-between;
+}
+
+.go__back {
+  gap: 1rem;
+}
+
+.go__back img {
+  max-width: 1rem;
+}
+
+.go__back button {
+  background: var(--white);
+  padding: 0.5em 0.75em;
+  border-radius: 0.25rem;
+}
+
+.go__back span {
+  display: none;
+}
+
+/* <----- Main -----> */
+
+section {
+  margin: 1em 0;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 3.3vw, 4.3rem);
+  line-height: 1.25;
+}
+
+p {
+  position: relative;
+  font-size: clamp(1.55rem, 1.65vw, 2rem);
+  line-height: 1.6;
+  margin-left: 2em;
+  max-width: 550px;
+}
+
+.emoji::before {
+  position: absolute;
+  font-size: 3.25rem;
+  left: -3.75rem;
+  top: -0.75rem;
+}
+
+.balloon::before {
+  content: '🎈';
+}
+
+.newspaper::before {
+  content: '🗞️';
+}
+
+.bulb::before {
+  content: '💡';
+}
+
+form {
+  background: var(--white);
+  border-radius: 1.25rem;
+  padding-inline: 2em;
+  font-family: 'Roboto';
+  max-width: calc(620px - 2em);
+}
+
+h2 {
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  line-height: 1.4;
+  margin-bottom: 1.25em;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+}
+
+label,
+input::placeholder,
+form > button {
+  font-size: clamp(1.6rem, 5vw, 1.8rem);
+}
+
+button,
+input {
+  width: 100%;
+}
+
+input {
+  border-radius: 0.25rem;
+  margin-bottom: 2.5em;
+  outline: unset;
+}
+
+input:focus {
+  border: 1px solid var(--black);
+}
+
+.flex > input {
+  width: auto;
+}
+
+.terms__conditions {
+  align-items: baseline;
+  gap: 1.25rem;
+}
+
+.terms__conditions p {
+  margin-left: 0;
+}
+
+button {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2em 0;
+  }
+
+  .go__back {
+    gap: 2rem;
+  }
+
+  .go__back span {
+    display: initial;
+  }
+
+  .go__back button {
+    margin: 0;
+    width: auto;
+  }
+
+  main.column {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.row {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(6rem, 6vw, 12rem);
+  }
+
+  h1 {
+    max-width: 580px;
+  }
+
+  p {
+    max-width: 460px;
+  }
+
+  form {
+    padding: 2em 4em;
+    margin-top: 3em;
+  }
+
+  form input {
+    padding: 1.5em;
+  }
+}
