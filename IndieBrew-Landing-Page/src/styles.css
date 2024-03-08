@@ -10,10 +10,6 @@ ul {
   list-style: none;
 }
 
-img {
-  width: 100%;
-}
-
 h2 {
   font-size: clamp(3rem, 5vw, 5rem);
 }
@@ -41,10 +37,6 @@ p {
 
 .white__bg {
   background: var(--white);
-}
-
-.cursor__pointer {
-  cursor: pointer;
 }
 
 .svg {
@@ -85,14 +77,11 @@ p {
 .header {
   min-height: var(--header-height);
   justify-content: space-between;
+  padding-top: 3em;
 }
 
 .logo__link {
   align-items: center;
-}
-
-#logo {
-  max-width: 250px;
 }
 
 .navbar {
@@ -135,13 +124,30 @@ p {
 }
 
 /* <----- Main -----> */
+main::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgb(237, 203, 245);
+  background: radial-gradient(
+    circle at top left,
+    rgba(237, 203, 245, 1) 0%,
+    rgba(253, 247, 243, 1) 15%
+  );
+  z-index: -1;
+}
+
 main {
   min-height: calc(100svh - (var(--header-height) + var(--footer-height)));
 }
 
 /* hero__section */
 .hero__section {
-  margin: 5em auto;
+  margin: 0 auto 5em;
+  padding-top: 5em;
 }
 
 .hero__img {
@@ -154,16 +160,6 @@ main {
   font-size: clamp(4rem, 12vw, 7rem);
   line-height: 1.2;
   max-width: 660px;
-}
-
-button {
-  color: var(--white);
-  background: var(--purple);
-  border: none;
-  padding: 1em;
-  border-radius: 0.5rem;
-  font-size: 1.6rem;
-  margin: 0.5em 0 1.5em;
 }
 
 #user-avatars {
@@ -193,7 +189,7 @@ button {
 
 .footer {
   min-height: var(--footer-height);
-  padding-top: 3em;
+  padding-block: 3em;
 }
 
 .footer__text p {
@@ -234,8 +230,22 @@ button {
 }
 
 @media (min-width: 768px) {
-  body {
-    padding: 2em 0em;
+  main::before {
+    background: rgb(235, 200, 244);
+    background: radial-gradient(
+      circle at top left,
+      rgb(235, 200, 244) 0%,
+      rgb(250, 239, 238) 32%,
+      rgb(252, 252, 249) 100%
+    );
+  }
+
+  .header {
+    padding-top: 2em;
+  }
+
+  .footer {
+    padding-bottom: 2em;
   }
 
   .row {
@@ -274,6 +284,7 @@ button {
     transition: transform 0.5s ease-in-out;
     min-height: auto;
     width: auto;
+    text-transform: unset;
   }
 
   .navbar .cta--btn {
