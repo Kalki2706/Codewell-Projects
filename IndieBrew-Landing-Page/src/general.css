@@ -7,6 +7,7 @@
   /* Neutral Colors */
   --white: #fff;
   --black: #000;
+  --border-gray: #c0c0c0;
 
   /* Heights */
   --header-height: 5svh;
@@ -22,6 +23,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-anchor: initial;
 }
 
 html:focus-within {
@@ -33,8 +35,12 @@ body {
   text-rendering: optimizeSpeed;
   background: var(--smoke-white);
   color: var(--gray);
-  padding: 3em 0;
   margin: 0;
+  position: relative;
+}
+
+img {
+  width: 100%;
 }
 
 .container {
@@ -53,4 +59,22 @@ body {
 
 .column {
   flex-direction: column;
+}
+
+#logo {
+  max-width: 250px;
+}
+
+.cursor__pointer {
+  cursor: pointer;
+}
+
+button {
+  color: var(--white);
+  background: var(--purple);
+  border: none;
+  padding: 1em;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  margin: 0.5em 0 1.5em;
 }
