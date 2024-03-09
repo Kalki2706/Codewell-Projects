@@ -12,13 +12,18 @@
   /* Heights */
   --header-height: 5svh;
   --footer-height: 10svh;
+
+  /* Fonts */
+  --dm-sans: 'DM-Sans';
+  --roboto: 'Roboto';
+  --rb-m: 'Roboto Medium';
+  --rad: var(--roboto, Arial, var(--dm-sans));
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'DM-Sans';
 }
 
 html {
@@ -32,6 +37,7 @@ html:focus-within {
 
 body {
   font-size: 1.6rem;
+  font-family: var(--dm-sans, Arial, var(--roboto));
   text-rendering: optimizeSpeed;
   background: var(--smoke-white);
   color: var(--gray);
@@ -62,7 +68,8 @@ img {
 }
 
 #logo {
-  max-width: 250px;
+  width: 147px;
+  height: 42px;
 }
 
 .cursor__pointer {
