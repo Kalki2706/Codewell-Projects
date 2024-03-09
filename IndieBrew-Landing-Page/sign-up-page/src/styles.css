@@ -78,7 +78,7 @@ p {
 .emoji::before {
   position: absolute;
   font-size: 3.25rem;
-  left: -3.75rem;
+  right: calc(100% + 0.5rem);
   top: -0.75rem;
 }
 
