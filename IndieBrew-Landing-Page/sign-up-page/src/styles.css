@@ -21,7 +21,6 @@ input {
   border: 1px solid var(--border-gray);
 }
 
-label,
 #password,
 h1 {
   margin-bottom: 0.5em;
@@ -46,14 +45,20 @@ header {
   max-width: 1rem;
 }
 
-.go__back button {
+.go__back a {
   background: var(--white);
   padding: 0.5em 0.75em;
   border-radius: 0.25rem;
+  border: 1px solid var(--border-gray);
 }
 
 .go__back span {
   display: none;
+}
+
+.terms__conditions > label,
+p {
+  line-height: 1.6;
 }
 
 /* <----- Main -----> */
@@ -69,16 +74,15 @@ h1 {
 
 p {
   position: relative;
-  font-size: clamp(1.55rem, 1.65vw, 2rem);
-  line-height: 1.6;
+  font-size: clamp(1.6rem, 1.65vw, 2rem);
   margin-left: 2em;
-  max-width: 550px;
+  max-width: 570px;
 }
 
 .emoji::before {
   position: absolute;
   font-size: 3.25rem;
-  right: calc(100% + 0.5rem);
+  right: calc(100% + 0.25rem);
   top: -0.75rem;
 }
 
@@ -98,7 +102,7 @@ form {
   background: var(--white);
   border-radius: 1.25rem;
   padding-inline: 2em;
-  font-family: 'Roboto';
+  font-family: var(--rad);
   max-width: calc(620px - 2em);
 }
 
@@ -108,14 +112,15 @@ h2 {
   margin-bottom: 1.25em;
 }
 
-label {
+form > label {
   display: block;
   font-weight: 700;
+  margin-bottom: 0.75em;
 }
 
-label,
 input::placeholder,
-form > button {
+.label__font,
+input {
   font-size: clamp(1.6rem, 5vw, 1.8rem);
 }
 
@@ -141,9 +146,10 @@ input:focus {
 .terms__conditions {
   align-items: baseline;
   gap: 1.25rem;
+  margin-block: 1em;
 }
 
-.terms__conditions p {
+.terms__conditions label {
   margin-left: 0;
 }
 
@@ -164,7 +170,7 @@ button {
     display: initial;
   }
 
-  .go__back button {
+  .go__back a {
     margin: 0;
     width: auto;
   }
@@ -193,9 +199,5 @@ button {
   form {
     padding: 2em 4em;
     margin-top: 3em;
-  }
-
-  form input {
-    padding: 1.5em;
   }
 }
