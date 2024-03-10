@@ -203,13 +203,14 @@ main {
 .footer__links .sitemap__resources .resources {
   padding-right: 0.75em;
 }
+
 .footer__links h3 {
-  font-family: 'Roboto Medium';
+  font-family: var(--rb-m, Arial, var(--dm-sans));
   font-size: clamp(1.6rem, 3vw, 2.3rem);
 }
 
 .footer__links li a {
-  font-family: 'Roboto';
+  font-family: var(--rad);
   font-size: clamp(1.6rem, 3vw, 2rem);
 }
 
