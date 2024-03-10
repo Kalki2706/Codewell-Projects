@@ -38,7 +38,7 @@ addClickEvent('.close', () => {
 // buttons
 addClickEvent('button', () => {
   function redirect() {
-    window.open('./sign-up-page/index.html', '_blank');
+    window.location.href = '../sign-up-page/index.html';
   }
 
   redirect();
