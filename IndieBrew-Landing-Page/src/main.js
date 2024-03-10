@@ -1,4 +1,3 @@
-// const nav = document.querySelector('.navbar');
 const menu = document.querySelector('.menu'),
   close = document.querySelector('.close'),
   nav = document.querySelector('.navbar'),
@@ -39,7 +38,7 @@ addClickEvent('.close', () => {
 // buttons
 addClickEvent('button', () => {
   function redirect() {
-    window.open('./sign-up-page/index.html');
+    window.open('./sign-up-page/index.html', '_blank');
   }
 
   redirect();
