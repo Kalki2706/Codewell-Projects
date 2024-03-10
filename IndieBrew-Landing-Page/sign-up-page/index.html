@@ -16,9 +16,9 @@
       /></a>
 
       <div class="go__back flex align__center">
-        <button id="go--back" class="flex cursor__pointer">
+        <a href="../index.html" id="go--back" class="flex cursor__pointer">
           <img src="../assets/black-arrow.svg" alt="" />
-        </button>
+        </a>
 
         <span>Back to homepage</span>
       </div>
@@ -51,7 +51,7 @@
       <form>
         <h2>Create your IndieBrew Account</h2>
 
-        <label for="email">Email</label>
+        <label class="label__font" for="email">Email</label>
         <input
           class="cursor__pointer"
           type="email"
@@ -61,7 +61,7 @@
           required
         />
 
-        <label for="name">Full Name</label>
+        <label class="label__font" for="name">Full Name</label>
         <input
           class="cursor__pointer"
           type="text"
@@ -71,7 +71,7 @@
           required
         />
 
-        <label for="password">Password</label>
+        <label class="label__font" for="password">Password</label>
         <input
           class="cursor__pointer"
           type="password"
@@ -89,29 +89,19 @@
             id="terms"
             required
           />
-          <p>
+
+          <label for="terms" class="label__font">
             By creating an account on IndieBrew, you agree to the
             <strong>
               <a href="#">Terms & Conditions.</a>
             </strong>
-          </p>
+          </label>
         </div>
 
-        <button type="submit" class="cursor__pointer">Create an Account</button>
+        <button type="submit" class="label__font cursor__pointer">
+          Create an Account
+        </button>
       </form>
     </main>
-
-    <script>
-      const goBackBtn = document.getElementById('go--back');
-
-      // Sign Up page redirection
-      goBackBtn.addEventListener('click', () => {
-        function redirect() {
-          window.location.href = '../index.html';
-        }
-
-        redirect();
-      });
-    </script>
   </body>
 </html>
